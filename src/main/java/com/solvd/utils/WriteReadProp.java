@@ -19,7 +19,7 @@ public class WriteReadProp {
 			prop.store(outp, "");
 			outp.close();
 		} catch (IOException exc) {
-			exc.printStackTrace();
+			LOGGER.error();
 		}
 	}
 
@@ -33,7 +33,7 @@ public class WriteReadProp {
 			inp.close();
 			return prop.getProperty(key);
 		} catch (IOException exc) {
-			exc.printStackTrace();
+			LOGGER.error();
 		}
 
 		return "";
