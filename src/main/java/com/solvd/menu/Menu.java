@@ -92,14 +92,14 @@ public class Menu {
 
 				default:
 					
-					System.out.println("Please, use numbers from 0 to 8.");
+					LOGGER.error("Please, use numbers from 0 to 8.");
 					
 					break;
 				}
 
 			} catch (InputMismatchException | IllegalArgumentException miss) {
 
-				System.out.println("Please, use numbers.");
+				LOGGER.error("Please, use numbers.");
 			} finally {
 				
 				System.out.println("Have a nice day!");
