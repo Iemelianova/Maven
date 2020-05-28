@@ -26,12 +26,12 @@ public class WriteReadProp {
 		}
 	}
 
-	public static String getProps(String pathprop, String key) {
+	public static String getProps(String path, String key) {
 
 		Properties prop = new Properties();
 		FileInputStream inp = null;
 		try {
-			inp = new FileInputStream(pathprop);
+			inp = new FileInputStream(path);
 			prop.load(inp);
 			inp.close();
 			return prop.getProperty(key);

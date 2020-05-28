@@ -14,8 +14,6 @@ import org.apache.log4j.Logger;
 public class JsonConvert {
 	
 	private final static Logger LOGGER = Logger.getLogger(JsonConvert.class);
-//	final static String pathJSON = "MGroups.json";
-//	static String path = WriteReadProp.getProps(WriteReadProp.pathprop, "path to JSON");
 	
 
 	/**
