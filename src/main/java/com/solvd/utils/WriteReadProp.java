@@ -22,7 +22,7 @@ public class WriteReadProp {
 			prop.store(outp, "");
 			outp.close();
 		} catch (IOException exc) {
-			LOGGER.error(exc);;
+			LOGGER.info(exc);;
 		}
 	}
 

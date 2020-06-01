@@ -31,11 +31,10 @@ public class Acapella extends Vocals implements ISoprano {
 
 	@Override
 	public void printInfo() {
-		Acapella ac = new Acapella();
-		LOGGER.info("Century: " + ac.getCentury());
-		LOGGER.info("Music era: " + ac.getEra());
-		LOGGER.info("Genre of music: " + ac.getGenre());
-		LOGGER.info("Singer: " + ac.getSinger());
+		LOGGER.info("Century: " + getCentury());
+		LOGGER.info("Music era: " + getEra());
+		LOGGER.info("Genre of music: " + getGenre());
+		LOGGER.info("Singer: " + getSinger());
 	}
 
 }

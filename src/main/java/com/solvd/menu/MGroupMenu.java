@@ -8,7 +8,7 @@ import com.solvd.exceptions.EmptyExc;
 import com.solvd.exceptions.FutureCenturyExc;
 import com.solvd.exceptions.PastCenturyExc;
 import com.solvd.lists.MGroupList;
-import com.solvd.music.types.groups.MusicGroups;
+import com.solvd.music.types.groups.MusicGroup;
 import com.solvd.utils.JsonConvert;
 import com.solvd.utils.WriteReadProp;
 
@@ -51,12 +51,12 @@ public class MGroupMenu {
 			throw new EmptyExc(EmptyExc.printEmpMessage());
 		}
 
-		MusicGroups mgroup = new MusicGroups(group1century, group1era, group1genre, group1name);
+		MusicGroup mgroup = new MusicGroup(group1century, group1era, group1genre, group1name);
 
 		mlist.setMusicGroups(mgroup);
 		System.out.println("You added next information: ");
 
-		for (MusicGroups groups : mlist.getListMusicGroups()) {
+		for (MusicGroup groups : mlist.getListMusicGroups()) {
 			mgroup.printInfo();
 		}
 	}
@@ -94,7 +94,7 @@ public class MGroupMenu {
 			throw new EmptyExc(EmptyExc.printEmpMessage());
 		}
 
-		MusicGroups mgroup = new MusicGroups(group1century, group1era, group1genre, group1name);
+		MusicGroup mgroup = new MusicGroup(group1century, group1era, group1genre, group1name);
         JsonConvert jsonc = new JsonConvert();
         
         System.out.println("Enter new file name: ");

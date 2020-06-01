@@ -6,7 +6,6 @@ import com.solvd.music.rhythm.Rhythm;
 
 public class WayOfExecution extends Types {
 
-	WayOfExecution w = new WayOfExecution();
 	private final static Logger LOGGER = Logger.getLogger(WayOfExecution.class);
 
 	public WayOfExecution() {

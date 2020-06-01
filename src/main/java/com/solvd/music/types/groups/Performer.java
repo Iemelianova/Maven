@@ -29,11 +29,10 @@ public class Performer extends Types {
 
 	@Override
 	public void printInfo() {
-		Performer perf = new Performer();
-		LOGGER.info("Century: " + perf.getCentury());
-		LOGGER.info("Music era: " + perf.getEra());
-		LOGGER.info("Genre of music: " + perf.getGenre());
-		LOGGER.info("Performer name: " + perf.performerName);
+		LOGGER.info("Century: " + getCentury());
+		LOGGER.info("Music era: " + getEra());
+		LOGGER.info("Genre of music: " + getGenre());
+		LOGGER.info("Performer name: " + performerName);
 	}
 
 	

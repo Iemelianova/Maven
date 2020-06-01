@@ -41,12 +41,11 @@ public class Choir extends Vocals {
 	
 	@Override
 	public void printInfo() {
-		Choir ch = new Choir();
-		LOGGER.info("Century: " + ch.getCentury());
-		LOGGER.info("Music era: " + ch.getEra());
-		LOGGER.info("Genre of music: " + ch.getGenre());
-		LOGGER.info("Singers quantity: " + ch.getSingers());
-		LOGGER.info("Choir name: " + ch.getChoirName());
+		LOGGER.info("Century: " + getCentury());
+		LOGGER.info("Music era: " + getEra());
+		LOGGER.info("Genre of music: " + getGenre());
+		LOGGER.info("Singers quantity: " + getSingers());
+		LOGGER.info("Choir name: " + getChoirName());
 
 	}
 

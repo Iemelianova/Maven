@@ -28,10 +28,9 @@ public class Rhythm extends MusicEras {
 	}
 	
 	public void printInfo() {
-		Rhythm r = new Rhythm();
-			LOGGER.info("Century: " + r.getCentury());
-			LOGGER.info("Music era: " + r.getEra());
-			LOGGER.info("Kind of music: " + r.getKind());
+			LOGGER.info("Century: " + getCentury());
+			LOGGER.info("Music era: " + getEra());
+			LOGGER.info("Kind of music: " + getKind());
 	}
 
 	

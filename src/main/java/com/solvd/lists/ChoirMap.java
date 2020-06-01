@@ -21,7 +21,7 @@ public class ChoirMap {
 	 */
 	public void setChoir(Choir choir) {
 		mapOfChoir.put(choir.getChoirName(), choir);
-		LOGGER.debug(mapOfChoir);
+		LOGGER.info(mapOfChoir);
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class ChoirMap {
 	 */
 	public void removeEnsemble(String ensembleName) {
 		mapOfChoir.remove(ensembleName);
-		LOGGER.debug(mapOfChoir);
+		LOGGER.info(mapOfChoir);
 
 	}
 

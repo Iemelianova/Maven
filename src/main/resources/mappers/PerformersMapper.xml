@@ -1,0 +1,28 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.interfaces.IPerformersDAO">
+    <resultMap id="performers" type="model.Performers">
+        <id property="id_performer" column="id_performer"/>
+        <result property="century" column="century"/>
+        <result property="music_era" column="music_era"/>
+        <result property="genre" column="genre"/>
+		<result property="performer_name" column="performer_name"/>
+    </resultMap>
+    <select id="getPerformerByName" parameterType="model.Performers">
+        select * from Performers where performer_name = #{performer_name}
+    </select>
+  
+    <insert id="insertPerformers" parameterType="model.Performers">
+        insert into Performers(century, music_era, genre, performer_name)
+        values (#{century}, #{music_era}, #{genre}, #{performer_name})
+    </insert>
+    <update id="updatePerformers" parameterType="model.Performers">
+        update Performers
+        set century = #{century}, music_era = #{music_era}, genre = #{genre}, performer_name = #{performer_name}
+        where id_performer = #{id_performer}
+    </update>
+    <delete id="deletePerformers" parameterType="model.Performers">
+        delete from Performers
+        where id_performer = #{id_performer}
+    </delete>
+</mapper>

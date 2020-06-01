@@ -32,9 +32,9 @@ public class Types extends MusicEras {
 	@Override
 	public void printInfo() {
 		Types t = new Types();
-		LOGGER.info("Century: " + t.getCentury());
-		LOGGER.info("Music era: " + t.getEra());
-		LOGGER.info("Genre of music: " + t.getGenre());
+		LOGGER.info("Century: " + getCentury());
+		LOGGER.info("Music era: " + getEra());
+		LOGGER.info("Genre of music: " + getGenre());
 	}
 
 	

@@ -24,30 +24,30 @@ public class PrepStatement {
 		        "SELECT * FROM users where performer_name = ?");
 	} catch (SQLException e1) {
 		
-		 LOGGER.debug(e1.getMessage());
+		 LOGGER.info(e1.getMessage());
 	}
    
     ResultSet result2 = null;
 	try {
 		result2 = preparedStatement.executeQuery();
 	} catch (SQLException e1) {
-		LOGGER.debug(e1.getMessage());	}
+		LOGGER.info(e1.getMessage());	}
  
     try {
 		while (result2.next()) {
 		    LOGGER.info(result2.getString("performer_name"));
 		}
 	} catch (SQLException e) {
-		LOGGER.debug(e.getMessage());	}
+		LOGGER.info(e.getMessage());	}
     
     	}
     	
     public void insertInfoPrepared() {
     try {
 		preparedStatement = connection.prepareStatement(
-		        "INSERT INTO performers(century, music_era, genre, performer_name) VALUES(?)");
+		        "INSERT INTO performers VALUES(?)");
 	} catch (SQLException e1) {
-		LOGGER.debug(e1.getMessage());	}
+		LOGGER.info(e1.getMessage());	}
 		
 	}
 }

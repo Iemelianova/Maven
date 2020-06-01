@@ -23,13 +23,13 @@ public class Connector {
             try {
 				Class.forName("org.postgresql.Driver");
 			
-            LOGGER.debug("Driver is connected");
+            LOGGER.info("Driver is connected");
 
     		connection = DriverManager.getConnection(url, name, password);
-    		LOGGER.debug("Connection established");
+    		LOGGER.info("Connection established");
              } catch (ClassNotFoundException | SQLException e) {
 				
-				LOGGER.debug(e);;
+				LOGGER.info(e);
 			}
     		return connection;
 

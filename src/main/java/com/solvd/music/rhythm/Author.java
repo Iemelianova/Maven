@@ -29,11 +29,10 @@ public class Author extends Rhythm {
 	}
 	@Override
 	public void printInfo() {
-		Author a = new Author();
-		LOGGER.info("Century: " + a.getCentury());
-		LOGGER.info("Music era: " + a.getEra());
-		LOGGER.info("Kind of music: " + a.getKind());
-		LOGGER.info("Composer: " + composer);
+		LOGGER.info("Century: " + getCentury());
+		LOGGER.info("Music era: " + getEra());
+		LOGGER.info("Kind of music: " + getKind());
+		LOGGER.info("Composer: " + getComposer());
 
 	}
 

@@ -23,7 +23,7 @@ public class AuthorList {
 	 */
 	public void setAuthor(Author author) {
 		listAuthor.add(author);
-		LOGGER.debug(listAuthor);
+		LOGGER.info(listAuthor);
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class AuthorList {
 		for (Author author : listAuthor) {
 			if (author.getComposer().equals(authorName))
 				listAuthor.remove(author);
-			LOGGER.debug(listAuthor);
+			LOGGER.info(listAuthor);
 			break;
 		}
 	}

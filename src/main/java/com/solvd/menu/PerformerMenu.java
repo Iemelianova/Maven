@@ -27,7 +27,8 @@ public class PerformerMenu {
 	static Scanner scanp1 = new Scanner(System.in);
 
 	public static void openPerformerMenu() throws PastCenturyExc, FutureCenturyExc, EmptyExc {
-     connector.getMyConnection();
+	     connector.getMyConnection();
+
 		System.out.println("Let's try to add new performer. \n" + "Please, enter century (use numbers, please): \n");
 		int performer1century = scanp.nextInt();
 
@@ -62,7 +63,7 @@ public class PerformerMenu {
 			preparedStatement.setString(4, performer1genre);
 			preparedStatement.setString(5, performer1name);
 		} catch (SQLException e) {
-			LOGGER.debug(e);
+			LOGGER.info(e);
 		}
 		
 
@@ -73,7 +74,7 @@ public class PerformerMenu {
 		try {
 			preparedStatement.setString(5, performer1name);
 		} catch (SQLException e) {
-			LOGGER.debug(e);
+			LOGGER.info(e);
 		}
 
 		for (Performer pefrormer : plist.getSetOfPerformer()) {

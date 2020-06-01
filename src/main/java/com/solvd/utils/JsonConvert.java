@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.solvd.music.types.groups.MusicGroups;
+import com.solvd.music.types.groups.MusicGroup;
 import com.solvd.utils.WriteReadProp;
 
 import org.apache.log4j.Logger;
@@ -30,7 +30,7 @@ public class JsonConvert {
 			LOGGER.info("Converted to string");
 
 		} catch (JsonProcessingException ex) {
-			LOGGER.error(ex);
+			LOGGER.info(ex);
 		}
 
 		return jsonString;
@@ -47,9 +47,9 @@ public class JsonConvert {
 			LOGGER.info("Writed to file");
 
 		} catch (JsonProcessingException ex) {
-			LOGGER.error(ex);
+			LOGGER.info(ex);
 		} catch (IOException ex) {
-			LOGGER.error(ex);
+			LOGGER.info(ex);
 		}
 	}
 	
@@ -58,16 +58,16 @@ public class JsonConvert {
 	 * 
 	 * @return mgroup - MusicGroups' object, the output parameter of the method
 	 */
-	public MusicGroups convertJsonStringToPOJO(String jsonString) {
+	public MusicGroup convertJsonStringToPOJO(String jsonString) {
 
-		MusicGroups mgroup = null;
+		MusicGroup mgroup = null;
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mgroup  = mapper.readValue(jsonString, MusicGroups.class);
+			mgroup  = mapper.readValue(jsonString, MusicGroup.class);
 			LOGGER.info("Converted to POJO");
 
 		} catch (JsonProcessingException ex) {
-			LOGGER.error(ex);
+			LOGGER.info(ex);
 		}
 
 		return mgroup;

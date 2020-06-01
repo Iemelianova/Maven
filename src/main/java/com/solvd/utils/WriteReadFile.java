@@ -32,7 +32,7 @@ public class WriteReadFile {
 
 		} catch (FileNotFoundException exc) {
 
-			LOGGER.error("Sorry, file does not exist");
+			LOGGER.info("Sorry, file does not exist");
 
 		} finally {
 			scan.close();
@@ -53,7 +53,7 @@ public class WriteReadFile {
 				printWriter.close();
 			}
 		} catch (FileNotFoundException ex) {
-			LOGGER.error(path, ex);		
+			LOGGER.info(path, ex);		
 			}
 	}
 

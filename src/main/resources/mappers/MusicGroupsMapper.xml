@@ -1,0 +1,28 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.interfaces.IMGroupsDAO">
+    <resultMap id="groups" type="model.MusicGroups">
+        <id property="id_group" column="id_group"/>
+        <result property="century" column="century"/>
+        <result property="music_era" column="music_era"/>
+        <result property="genre" column="genre"/>
+		<result property="music_group_name" column="music_group_name"/>
+    </resultMap>
+    <select id="getMusicGroupsByName" parameterType="model.MusicGroups">
+        select * from Music_groups where performer_name = #{performer_name}
+    </select>
+  
+    <insert id="insertMusicGroups" parameterType="model.MusicGroups">
+        insert into Music_groups(century, music_era, genre, performer_name)
+        values (#{century}, #{music_era}, #{genre}, #{performer_name})
+    </insert>
+    <update id="updateMusicGroups" parameterType="model.MusicGroups">
+        update Music_groups
+        set century = #{century}, music_era = #{music_era}, genre = #{genre}, performer_name = #{performer_name}
+        where id_performer = #{id_performer}
+    </update>
+    <delete id="deleteMusicGroups" parameterType="model.MusicGroups">
+        delete from Music_groups
+        where id_performer = #{id_performer}
+    </delete>
+</mapper>

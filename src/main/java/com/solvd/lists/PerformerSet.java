@@ -23,7 +23,7 @@ public class PerformerSet {
 	 */
 	public void setPerformer(Performer performer) {
 		setOfPerformer.add(performer);
-		LOGGER.debug(setOfPerformer);
+		LOGGER.info(setOfPerformer);
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class PerformerSet {
 		for (Performer performer : setOfPerformer) {
 			if (performer.getPerformerName().equals(mperformerName))
 				setOfPerformer.remove(performer);
-			LOGGER.debug(setOfPerformer);
+			LOGGER.info(setOfPerformer);
 
 			break;
 		}
